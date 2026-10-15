@@ -1,0 +1,55 @@
+{
+  "name": "@codesoda/pi-fast-mode",
+  "version": "0.1.0",
+  "description": "Pi Fast mode controls with per-child launch preferences for agent orchestration.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "openai",
+    "anthropic",
+    "fast",
+    "subagents"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codesoda/pi-fast-mode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codesoda/pi-fast-mode/issues"
+  },
+  "homepage": "https://github.com/codesoda/pi-fast-mode#readme",
+  "files": [
+    "extensions/fast/index.ts",
+    "extensions/fast/fast.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/fast/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "scripts": {
+    "test": "node --test test/fast-extension.test.mjs",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^1.0.4",
+    "@earendil-works/pi-coding-agent": "^1.0.4",
+    "@earendil-works/pi-tui": "^1.0.4",
+    "@types/node": "^25.9.1",
+    "typebox": "^1.3.6",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "type": "module"
+}
